@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SceneSortX – AI Image Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>SceneSortX</h2>
+
+        <label class="label">Select Module</label>
+        <select id="moduleSelect">
+            <option value="scene">Scene Classification</option>
+            <option value="waste">Waste Classification</option>
+            <option value="fashion">Fashion Analysis</option>
+            <option value="vehicle">Vehicle Analysis</option>
+        </select>
+
+        <button id="clearBtn" class="clear-btn">Clear Screen</button>
+    </div>
+
+
+    <div class="main">
+
+        <h1 class="title">AI Image Analysis Dashboard</h1>
+        <p class="subtitle">Upload an image and run the selected AI module</p>
+
+        <div class="upload-box" id="uploadBox">
+            <p>Drag & drop an image or click to upload</p>
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+
+        <div id="previewContainer" class="preview-container hidden">
+            <h3>Uploaded Image</h3>
+            <img id="previewImage" class="preview-image" src="#">
+        </div>
+
+        <button id="analyzeBtn" class="analyze-btn hidden">Analyze</button>
+
+        <div class="loading hidden" id="loading">Analyzing...</div>
+
+        <div id="results" class="results hidden">
+            <h2>Results</h2>
+            <pre id="resultJSON"></pre>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
